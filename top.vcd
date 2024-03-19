@@ -1,0 +1,485 @@
+$date
+	Fri Mar  8 22:05:26 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module top_tb $end
+$var reg 1 ! clk_tb $end
+$var reg 1 " rst_tb $end
+$scope module u_singlecycle $end
+$var wire 1 ! clk $end
+$var wire 32 # data_out [31:0] $end
+$var wire 32 $ loadout [31:0] $end
+$var wire 1 " rst $end
+$var wire 32 % wrap_load_out [31:0] $end
+$var wire 32 & storein [31:0] $end
+$var wire 1 ' store $end
+$var wire 1 ( regwrite $end
+$var wire 1 ) pcsel $end
+$var wire 32 * out_O [31:0] $end
+$var wire 32 + outO [31:0] $end
+$var wire 32 , out [31:0] $end
+$var wire 1 - operB $end
+$var wire 32 . opb [31:0] $end
+$var wire 32 / opa [31:0] $end
+$var wire 1 0 memwrite $end
+$var wire 3 1 memtoreg [2:0] $end
+$var wire 1 2 memread $end
+$var wire 4 3 mask [3:0] $end
+$var wire 1 4 lui $end
+$var wire 1 5 load $end
+$var wire 1 6 jalr $end
+$var wire 1 7 jal $end
+$var wire 1 8 itype $end
+$var wire 1 9 immsel $end
+$var wire 32 : data [31:0] $end
+$var wire 1 ; branch $end
+$var wire 1 < bnch_sig $end
+$var wire 1 = auipc $end
+$var wire 4 > aluop [3:0] $end
+$var wire 32 ? address_out [31:0] $end
+$var wire 32 @ Imm_out [31:0] $end
+$scope module u_Executer $end
+$var wire 32 A outO [31:0] $end
+$var wire 32 B instrb [31:0] $end
+$var wire 32 C instra [31:0] $end
+$var wire 4 D code [3:0] $end
+$scope module u_alu $end
+$var wire 32 E instrb [31:0] $end
+$var wire 32 F instra [31:0] $end
+$var wire 4 G code [3:0] $end
+$var reg 32 H outO [31:0] $end
+$upscope $end
+$upscope $end
+$scope module u_Fetcher $end
+$var wire 32 I address_in [31:0] $end
+$var wire 8 J alu [7:0] $end
+$var wire 1 ! clk $end
+$var wire 1 " rst $end
+$var wire 1 6 jr $end
+$var wire 1 7 j $end
+$var wire 1 ; branchsig $end
+$var wire 1 < bnch1 $end
+$var wire 1 = aui $end
+$var wire 32 K address_out [31:0] $end
+$scope module u_pcV $end
+$var wire 32 L address_in [31:0] $end
+$var wire 8 M alu [7:0] $end
+$var wire 1 ! clk $end
+$var wire 1 " rst $end
+$var wire 1 6 jr $end
+$var wire 1 7 j $end
+$var wire 1 ; branchsig $end
+$var wire 1 < bnch1 $end
+$var wire 1 = aui $end
+$var reg 32 N address_out [31:0] $end
+$upscope $end
+$upscope $end
+$scope module u_decoderd $end
+$var wire 32 O address_out [31:0] $end
+$var wire 1 ! clk $end
+$var wire 32 P data [31:0] $end
+$var wire 32 Q data_out [31:0] $end
+$var wire 3 R func3 [2:0] $end
+$var wire 1 S func7 $end
+$var wire 3 T function3 [2:0] $end
+$var wire 32 U instr [31:0] $end
+$var wire 32 V instra [31:0] $end
+$var wire 32 W instrb [31:0] $end
+$var wire 32 X op_b [31:0] $end
+$var wire 7 Y opcode [6:0] $end
+$var wire 32 Z outO [31:0] $end
+$var wire 5 [ rdaddr [4:0] $end
+$var wire 1 " reset $end
+$var wire 5 \ rs1addr [4:0] $end
+$var wire 5 ] rs2addr [4:0] $end
+$var wire 1 ^ rst $end
+$var wire 1 ' store $end
+$var wire 1 ) selpin $end
+$var wire 1 9 sel $end
+$var wire 32 _ rs2 [31:0] $end
+$var wire 32 ` rs1 [31:0] $end
+$var wire 1 ( regwrite $end
+$var wire 1 ) pcsel $end
+$var wire 32 a out_O [31:0] $end
+$var wire 32 b out [31:0] $end
+$var wire 1 - operB $end
+$var wire 32 c opb [31:0] $end
+$var wire 32 d opa [31:0] $end
+$var wire 32 e op_a [31:0] $end
+$var wire 1 0 memwrite $end
+$var wire 3 f memtoreg [2:0] $end
+$var wire 1 2 memread $end
+$var wire 1 4 lui $end
+$var wire 1 5 load $end
+$var wire 1 6 jalr $end
+$var wire 1 7 jal $end
+$var wire 1 8 itype $end
+$var wire 1 9 immsel $end
+$var wire 1 ( enable $end
+$var wire 1 ; branch $end
+$var wire 1 < bnch_sig $end
+$var wire 1 ; bnch $end
+$var wire 32 g b [31:0] $end
+$var wire 1 = auipc $end
+$var wire 4 h aluop [3:0] $end
+$var wire 32 i a [31:0] $end
+$var wire 1 = Ui_imm $end
+$var wire 1 4 U_imm $end
+$var wire 1 7 UJ_imm $end
+$var wire 1 ' S_imm $end
+$var wire 1 ; SB_imm $end
+$var wire 32 j Imm_out [31:0] $end
+$var wire 1 5 Il_imm $end
+$var wire 1 6 Ij_imm $end
+$var wire 1 8 I_imm $end
+$scope module u_comparasion $end
+$var wire 3 k function3 [2:0] $end
+$var wire 32 l rs2 [31:0] $end
+$var wire 32 m rs1 [31:0] $end
+$var wire 1 ; bnch $end
+$var reg 1 < bnch_sig $end
+$upscope $end
+$scope module u_controller $end
+$var wire 3 n func3 [2:0] $end
+$var wire 1 S func7 $end
+$var wire 7 o opcode [6:0] $end
+$var wire 1 ' store $end
+$var wire 1 ( regwrite $end
+$var wire 1 p r $end
+$var wire 1 ) pcsel $end
+$var wire 1 - operB $end
+$var wire 1 0 memwrite $end
+$var wire 3 q memtoreg [2:0] $end
+$var wire 1 2 memread $end
+$var wire 1 4 lui $end
+$var wire 1 5 load $end
+$var wire 1 6 jalr $end
+$var wire 1 7 jal $end
+$var wire 1 8 itype $end
+$var wire 1 9 immsel $end
+$var wire 1 ; branch $end
+$var wire 1 = auipc $end
+$var wire 4 r aluop [3:0] $end
+$scope module u_cntrl0 $end
+$var wire 3 s func3 [2:0] $end
+$var wire 1 S func7 $end
+$var wire 1 5 load $end
+$var wire 1 ' Store $end
+$var wire 1 p R_type $end
+$var wire 1 6 Jalr $end
+$var wire 1 7 Jal $end
+$var wire 1 8 I_type $end
+$var wire 1 ; Branch $end
+$var wire 1 = Auipc $end
+$var reg 4 t aluop [3:0] $end
+$upscope $end
+$scope module u_cntrldec0 $end
+$var wire 1 5 load $end
+$var wire 1 ' Store $end
+$var wire 1 p R_type $end
+$var wire 1 4 LUI $end
+$var wire 1 6 JALR $end
+$var wire 1 7 JAL $end
+$var wire 1 8 I_type $end
+$var wire 1 ; Bnch $end
+$var wire 1 = AUIPC $end
+$var reg 1 9 immsel $end
+$var reg 1 2 memread $end
+$var reg 3 u memtoreg [2:0] $end
+$var reg 1 0 memwrite $end
+$var reg 1 - operB $end
+$var reg 1 ) pcsel $end
+$var reg 1 ( regwrite $end
+$upscope $end
+$scope module u_typedec $end
+$var wire 7 v opcode [6:0] $end
+$var reg 1 = auipc $end
+$var reg 1 ; branch $end
+$var reg 1 8 itype $end
+$var reg 1 7 jal $end
+$var reg 1 6 jalr $end
+$var reg 1 5 load $end
+$var reg 1 4 lui $end
+$var reg 1 p r $end
+$var reg 1 ' store $end
+$upscope $end
+$upscope $end
+$scope module u_immgeneration $end
+$var wire 1 8 I_imm $end
+$var wire 1 6 Ij_imm $end
+$var wire 1 5 Il_imm $end
+$var wire 1 ; SB_imm $end
+$var wire 1 ' S_imm $end
+$var wire 1 7 UJ_imm $end
+$var wire 1 4 U_imm $end
+$var wire 1 = Ui_imm $end
+$var wire 32 w instr [31:0] $end
+$var reg 32 x Imm_out [31:0] $end
+$upscope $end
+$scope module u_multiplexer $end
+$var wire 32 y b [31:0] $end
+$var wire 1 9 sel $end
+$var wire 32 z a [31:0] $end
+$var reg 32 { out [31:0] $end
+$upscope $end
+$scope module u_multiplexer2 $end
+$var wire 32 | op_b [31:0] $end
+$var wire 1 ) selpin $end
+$var wire 32 } op_a [31:0] $end
+$var reg 32 ~ out_O [31:0] $end
+$upscope $end
+$scope module u_ram $end
+$var wire 1 ! clk $end
+$var wire 32 !" data [31:0] $end
+$var wire 1 ( enable $end
+$var wire 5 "" rdaddr [4:0] $end
+$var wire 1 ^ reset $end
+$var wire 5 #" rs1addr [4:0] $end
+$var wire 5 $" rs2addr [4:0] $end
+$var wire 32 %" opb [31:0] $end
+$var wire 32 &" opa [31:0] $end
+$var integer 32 '" i [31:0] $end
+$upscope $end
+$upscope $end
+$scope module u_memoryer $end
+$var wire 1 5 Load $end
+$var wire 2 (" byteadd [1:0] $end
+$var wire 32 )" data_i [31:0] $end
+$var wire 3 *" fun3 [2:0] $end
+$var wire 1 +" load $end
+$var wire 1 ' mem_en $end
+$var wire 1 ," store $end
+$var wire 32 -" wrap_load_in [31:0] $end
+$var wire 32 ." wrap_load_out [31:0] $end
+$var wire 4 /" masking [3:0] $end
+$var wire 32 0" data_o [31:0] $end
+$scope module u_wrapper $end
+$var wire 1 5 Load $end
+$var wire 2 1" byteadd [1:0] $end
+$var wire 32 2" data_i [31:0] $end
+$var wire 3 3" fun3 [2:0] $end
+$var wire 1 ' mem_en $end
+$var wire 32 4" wrap_load_in [31:0] $end
+$var reg 32 5" data_o [31:0] $end
+$var reg 4 6" masking [3:0] $end
+$var reg 32 7" wrap_load_out [31:0] $end
+$upscope $end
+$upscope $end
+$scope module u_write_backer $end
+$var wire 32 8" A3 [31:0] $end
+$var wire 32 9" B3 [31:0] $end
+$var wire 32 :" C3 [31:0] $end
+$var wire 32 ;" D3 [31:0] $end
+$var wire 32 <" E3 [31:0] $end
+$var wire 32 =" Imm_out [31:0] $end
+$var wire 3 >" Selpin [2:0] $end
+$var wire 32 ?" outO [31:0] $end
+$var wire 32 @" Outter [31:0] $end
+$scope module u_multiplexer3 $end
+$var wire 32 A" A3 [31:0] $end
+$var wire 32 B" B3 [31:0] $end
+$var wire 32 C" C3 [31:0] $end
+$var wire 32 D" D3 [31:0] $end
+$var wire 32 E" E3 [31:0] $end
+$var wire 3 F" Selpin [2:0] $end
+$var reg 32 G" Outter [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx G"
+b0 F"
+bx E"
+bx D"
+bx C"
+bx B"
+bx A"
+bx @"
+bz ?"
+b0 >"
+bz ="
+bx <"
+bx ;"
+bx :"
+bx 9"
+bx 8"
+bx 7"
+bx 6"
+bx 5"
+bz 4"
+bz 3"
+bx 2"
+bx 1"
+bx 0"
+bx /"
+bx ."
+bz -"
+z,"
+z+"
+bz *"
+bx )"
+bx ("
+bx '"
+bx &"
+bx %"
+bz $"
+bz #"
+bz ""
+bx !"
+bx ~
+bx }
+bx |
+bx {
+bx z
+bx y
+bx x
+bz w
+bz v
+b0 u
+bx t
+bz s
+bx r
+b0 q
+0p
+bz o
+bz n
+bx m
+bx l
+bz k
+bx j
+bx i
+bx h
+bx g
+b0 f
+bx e
+bx d
+bx c
+bx b
+bx a
+bx `
+bx _
+z^
+bz ]
+bz \
+bz [
+bz Z
+bz Y
+bx X
+bz W
+bz V
+bz U
+bz T
+zS
+bz R
+bz Q
+bx P
+bz O
+bx N
+bx M
+bz L
+bx K
+bx J
+bz I
+bx H
+bx G
+bx F
+bx E
+bx D
+bx C
+bx B
+bx A
+bx @
+bx ?
+bx >
+0=
+x<
+0;
+bx :
+x9
+08
+07
+06
+05
+04
+bx 3
+02
+b0 1
+00
+bx /
+bx .
+0-
+bx ,
+bx +
+bx *
+0)
+0(
+0'
+bx &
+bx %
+bz $
+bz #
+1"
+0!
+$end
+#5000
+b0 ?
+b0 K
+b0 N
+b0 X
+b0 |
+1!
+0"
+#10000
+0!
+#15000
+b100 ?
+b100 K
+b100 N
+b100 X
+b100 |
+1!
+1"
+#20000
+0!
+#25000
+b1000 ?
+b1000 K
+b1000 N
+b1000 X
+b1000 |
+1!
+#30000
+0!
+#35000
+b1100 ?
+b1100 K
+b1100 N
+b1100 X
+b1100 |
+1!
+#40000
+0!
+#45000
+b10000 ?
+b10000 K
+b10000 N
+b10000 X
+b10000 |
+1!
+#50000
+0!
+#55000
+b10100 ?
+b10100 K
+b10100 N
+b10100 X
+b10100 |
+1!

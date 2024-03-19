@@ -1,0 +1,28 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x56431a4b8d90 .scope module, "mux" "mux" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /INPUT 32 "b";
+    .port_info 2 /INPUT 1 "sel";
+    .port_info 3 /OUTPUT 32 "out";
+o0x7f6504471018 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0x56431a4baba0_0 .net "a", 31 0, o0x7f6504471018;  0 drivers
+o0x7f6504471048 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0x56431a4ffa50_0 .net "b", 31 0, o0x7f6504471048;  0 drivers
+v0x56431a4ffb30_0 .net "out", 31 0, L_0x56431a4ffd90;  1 drivers
+o0x7f65044710a8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x56431a4ffc20_0 .net "sel", 0 0, o0x7f65044710a8;  0 drivers
+L_0x56431a4ffd90 .functor MUXZ 32, o0x7f6504471018, o0x7f6504471048, o0x7f65044710a8, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "mux.v";
